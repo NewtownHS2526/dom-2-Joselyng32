@@ -38,7 +38,7 @@ if (runDemo1) {
     // Change text using textContent
     if (demoText1) {
       demoText1.textContent = "Text changed with textContent!";
-      demoText1.style.color = "#10b981";
+      demoText1.style.color = "#a3d84eff";
       demoText1.style.fontSize = "20px";
     }
     
@@ -99,7 +99,12 @@ if (practiceBtn1) {
     // STUDENT CODE HERE:
     // 1. Use getElementById to select 'practice-text-1'
     // 2. Change its textContent to "I changed this text!"
-    
+    const practiceText1 = document.getElementById('practice-text-1');
+    if(practiceText1) {
+      practiceText1.textContent = "I changed this text!";
+    };
+    console.log("Exercise 2: Changed text with textContent");
+  });
     // Example solution (students should write this):
     const practiceText1 = document.getElementById('practice-text-1');
     if (practiceText1) {
@@ -109,8 +114,7 @@ if (practiceBtn1) {
     }
     
     console.log("Exercise 2: Changed text with textContent");
-  });
-}
+  }
 
 // ============================================
 // EXERCISE 3: Student Practice - innerHTML
@@ -124,7 +128,12 @@ if (practiceBtn2) {
     // STUDENT CODE HERE:
     // 1. Use getElementById to select 'practice-html-1'
     // 2. Change its innerHTML to "<strong>Bold HTML</strong> and <em>italic text</em>"
-    
+        const practiceHtml1 = document.getElementById('practice-html-1');
+    if (practiceHtml1) {
+      practiceHtml1.innerHTML = "<strong>Bold HTML</strong> and <em>italic text</em>";
+    };
+    console.log("Exercise 3: Changed HTML with innerHTML");
+  });
     // Example solution (students should write this):
     const practiceHtml1 = document.getElementById('practice-html-1');
     if (practiceHtml1) {
@@ -133,9 +142,7 @@ if (practiceBtn2) {
     }
     
     console.log("Exercise 3: Changed HTML with innerHTML");
-  });
-}
-
+  }
 // ============================================
 // EXERCISE 4: Student Practice - style
 // ============================================
@@ -150,7 +157,14 @@ if (practiceBtn3) {
     // 2. Change its color to "red"
     // 3. Change its fontSize to "24px"
     // 4. Change its backgroundColor to "lightblue"
-    
+    const practiceStyle1 = document.getElementById('practice-style-1');
+    if (practiceStyle1) {
+      practiceStyle1.style.color = "red";
+      practiceStyle1.style.fontSize = "24px";
+      practiceStyle1.style.backgroundColor = "lightblue";
+    }
+    console.log("Exercise 4: Changed styles with style property");
+  });
     // Example solution (students should write this):
     const practiceStyle1 = document.getElementById('practice-style-1');
     if (practiceStyle1) {
@@ -161,9 +175,7 @@ if (practiceBtn3) {
     }
     
     console.log("Exercise 4: Changed styles");
-  });
-}
-
+  }
 /* 
 ================================================================================
 SECTION 2: getElementsByClassName() - Exercises
@@ -242,7 +254,12 @@ if (practiceBtn4) {
     // 1. Use getElementsByClassName to select all 'item-text' elements
     // 2. Loop through the collection
     // 3. Change each element's textContent to "Updated Item"
-    
+      const itemTexts = document.getElementsByClassName('item-text');
+    for (let i = 0; i < itemTexts.length; i++) {
+      itemTexts[i].textContent = `Updated Item ${i + 1}`;
+    }
+    console.log("Exercise 2: Changed all items with textContent");
+  });
     // Example solution (students should write this):
     const itemTexts = document.getElementsByClassName('item-text');
     for (let i = 0; i < itemTexts.length; i++) {
@@ -252,8 +269,7 @@ if (practiceBtn4) {
     }
     
     console.log("Exercise 2: Changed all items with textContent");
-  });
-}
+  }
 
 // ============================================
 // EXERCISE 3: Student Practice - innerHTML with loop
@@ -267,7 +283,12 @@ if (practiceBtn5) {
     // 1. Use getElementsByClassName to select all 'box-item' elements
     // 2. Loop through the collection
     // 3. Change each element's innerHTML to "<span style='color: green;'>Updated!</span>"
-    
+     const boxItems = document.getElementsByClassName('box-item');
+    for (let i = 0; i < boxItems.length; i++) {
+      boxItems[i].innerHTML = "<span style='color: green;'>Updated!</span>";
+    }
+    console.log("Exercise 3: Changed all boxes with innerHTML");
+  });
     // Example solution (students should write this):
     const boxItems = document.getElementsByClassName('box-item');
     for (let i = 0; i < boxItems.length; i++) {
@@ -276,9 +297,7 @@ if (practiceBtn5) {
     }
     
     console.log("Exercise 3: Changed all boxes with innerHTML");
-  });
-}
-
+  }
 // ============================================
 // EXERCISE 4: Student Practice - style with loop
 // ============================================
@@ -292,7 +311,13 @@ if (practiceBtn6) {
     // 2. Loop through the collection
     // 3. Change each element's backgroundColor to "lightblue"
     // 4. Change each element's color to "darkblue"
-    
+     const colorBoxes = document.getElementsByClassName('color-box');
+    for (let i = 0; i < colorBoxes.length; i++) {
+      colorBoxes[i].style.backgroundColor = "lightblue";
+      colorBoxes[i].style.color = "darkblue";
+    } 
+    console.log("Exercise 4: Changed all colors");
+  });
     // Example solution (students should write this):
     const colorBoxes = document.getElementsByClassName('color-box');
     for (let i = 0; i < colorBoxes.length; i++) {
@@ -303,8 +328,7 @@ if (practiceBtn6) {
     }
     
     console.log("Exercise 4: Changed all colors");
-  });
-}
+  }
 
 /* 
 ================================================================================
@@ -454,7 +478,16 @@ if (practiceBtn7) {
     // 1. Use querySelector('#target-id') to select the element
     // 2. Change its textContent to "Selected with querySelector!"
     // 3. Change its style
+      const targetElement = document.querySelector('#target-id');
+    if (targetElement) {
+      targetElement.textContent = "Selected with querySelector!";
+      targetElement.style.backgroundColor = "#dbeafe";
+      targetElement.style.borderColor = "#ee7deeff";
+      targetElement.style.color = "#1a2546ff";
+    }
     
+    console.log("Exercise 2: querySelector");
+  });
     // Example solution (students should write this):
     const targetElement = document.querySelector('#target-id');
     if (targetElement) {
@@ -465,8 +498,7 @@ if (practiceBtn7) {
     }
     
     console.log("Exercise 2: Selected by ID with querySelector");
-  });
-}
+  }
 
 // ============================================
 // EXERCISE 3: Student Practice - querySelector with Class
@@ -480,9 +512,7 @@ if (practiceBtn8) {
     // 1. Use querySelector('.target-class') to select the FIRST element
     // 2. Change its innerHTML to "<strong>First item selected!</strong>"
     // 3. Change its style
-    
-    // Example solution (students should write this):
-    const firstTarget = document.querySelector('.target-class');
+  const firstTarget = document.querySelector('.target-class');
     if (firstTarget) {
       firstTarget.innerHTML = "<strong>First item selected!</strong>";
       firstTarget.style.backgroundColor = "#dbeafe";
@@ -492,6 +522,16 @@ if (practiceBtn8) {
     console.log("Exercise 3: Selected first by class with querySelector");
   });
 }
+    // Example solution (students should write this):
+    const firstTarget = document.querySelector('.target-class');
+    if (firstTarget) {
+      firstTarget.innerHTML = "<strong>First item selected!</strong>";
+      firstTarget.style.backgroundColor = "#dbeafe";
+      firstTarget.style.borderColor = "#3b82f6";
+    }
+    
+    console.log("Exercise 3: Selected first by class with querySelector");
+
 
 // ============================================
 // EXERCISE 4: Student Practice - querySelector with complex selector
@@ -504,7 +544,13 @@ if (practiceBtn9) {
     // STUDENT CODE HERE:
     // 1. Use querySelector('div.special') to select the FIRST div with class special
     // 2. Change its textContent and style
-    
+    const specialDiv = document.querySelector('div.special');
+    if (specialDiv) {
+      specialDiv.textContent = "This div was selected with 'div.special'!";
+      specialDiv.style.backgroundColor = "#fef3c7";
+    }
+    console.log("Exercise 4: Selected with complex selector");
+  });
     // Example solution (students should write this):
     const specialDiv = document.querySelector('div.special');
     if (specialDiv) {
@@ -515,8 +561,7 @@ if (practiceBtn9) {
     }
     
     console.log("Exercise 4: Selected with complex selector");
-  });
-}
+  }
 
 /* 
 ================================================================================
